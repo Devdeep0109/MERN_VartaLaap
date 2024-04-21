@@ -1,0 +1,15 @@
+1. started with installing vite+react and express and mongoose etc
+2. create folder frontend and backend
+3. install node_modules outside both the folders.
+.............................................................
+4. start working on backend folder
+
+5.first make index.js file
+5.1 add routes.
+5.2 create routes folder -> auth_route.js -> make routes
+5.3 create controller folder -> auth_controller.js  to handle each route.
+
+6.
+6.1 Establish mongodb connection in index.js 
+6.2 make modelSchema for database.
+
