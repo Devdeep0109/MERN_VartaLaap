@@ -13,3 +13,27 @@
 6.1 Establish mongodb connection in index.js 
 6.2 make modelSchema for database.
 
+7.
+7.1 hashing of password using bcrypt 
+7.2.creating Tokens
+    inside Utils -> generateToken.... file
+
+8.Creating routes
+8.1 signUp
+8.2 Login
+8.3 Logout 
+
+9. Authentication is done
+............................................
+Message routes.....
+Creating schema for msg 
+model -> msg model and conversation model
+controller 
+routes send meg and get msg.....
+
+.....................................
+User routes
+Creating route to show other friend of that user.
+in routes -> user route
+controller -> user_controller 
+
