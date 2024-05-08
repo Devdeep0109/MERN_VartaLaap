@@ -7,7 +7,7 @@ const getUserForSideBar = async(req,res)=>{
 
         const loggedInUserId = req.user._id;
         // ne == not equal.
-        const fileteredUsers = await User.find({id : {$ne: loggedInUserId}}).select("-password"); // these will not add ourself. to do so we have to remove " {id : {$ne: loggedInUserId}} " 
+        const fileteredUsers = await User.find({_id : {$ne: loggedInUserId}}).select("-password"); // these will not add ourself. to do so we have to remove " {id : {$ne: loggedInUserId}} " 
 
         res.status(200).json(fileteredUsers);
     }

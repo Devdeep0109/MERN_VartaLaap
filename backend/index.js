@@ -11,8 +11,7 @@ const userRoutes = require("./routes/user_routes.js");
 
 const connnectToMongoDB = require('./db/connectToMogoDb.js');
 
-
-const app = express();
+const {app ,server} = require("./socket/socket.js");
 const PORT = process.env.PORT;
 
 //middleware
@@ -31,9 +30,7 @@ app.get("/" , (req,res)=>{
 })
 
 
-
-
-app.listen(PORT , (req,res)=>{
+server.listen(PORT , (req,res)=>{
     connnectToMongoDB();
     console.log(`Listening to port no. ${PORT}`);
 })

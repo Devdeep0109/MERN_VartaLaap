@@ -1,6 +1,7 @@
 
 const Conversation = require("../models/conversation_model");
 const Message = require("../models/message_model");
+const { getReceiverSocketId, io } = require("../socket/socket");
 
 const sendMessage  = async(req,res)=>{
 
@@ -31,6 +32,12 @@ const sendMessage  = async(req,res)=>{
         }
 
         // SOCKET IO FUNCTIONALITY WILL GO HERE....
+        const receiverSocketId = getReceiverSocketId(receiverId);
+
+        if(receiverSocketId){
+            // io.to(<socket_id>).emit is used to send events specific client.
+            io.to(receiverSocketId).emit("newMessage" ,newMessage);
+        }
 
 
         // await conversation.save();
