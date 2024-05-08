@@ -15,7 +15,7 @@ const {app ,server} = require("./socket/socket.js");
 
 
 const PORT = process.env.PORT;
-// const __dirname = path.resolve();
+const __dirname = path.resolve();
 
 
 //middleware
